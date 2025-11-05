@@ -15,17 +15,19 @@ import tempfile, os, textwrap
 from PyPDF2 import PdfReader
 
 app = FastAPI()
+origins = [
+    "http://localhost:3000",
+    "https://ai-cover-letter-c5bpyo0te-dhivakar-s-projects-a100c2bf.vercel.app/"  # <- make sure commas are correct
+]
 
 app.add_middleware(
     CORSMiddleware,
-   origins = [
-    "http://localhost:3000",  # React dev server
-    "https://ai-cover-letter-c5bpyo0te-dhivakar-s-projects-a100c2bf.vercel.app/",  # After deployment
-],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
