@@ -5,3 +5,4 @@ python-docx
 fpdf
 pdf2docx
 PyPDF2
+python-dotenv
