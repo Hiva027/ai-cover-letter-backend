@@ -21,7 +21,7 @@ app.add_middleware(
    origins = [
     "http://localhost:3000",  # React dev server
     "https://ai-cover-letter-c5bpyo0te-dhivakar-s-projects-a100c2bf.vercel.app/",  # After deployment
-]
+],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
