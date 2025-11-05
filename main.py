@@ -16,8 +16,8 @@ from PyPDF2 import PdfReader
 
 app = FastAPI()
 origins = [
-    "http://localhost:3000",
-    "https://ai-cover-letter-c5bpyo0te-dhivakar-s-projects-a100c2bf.vercel.app/"  # <- make sure commas are correct
+    "https://ai-cover-letter-flax.vercel.app",  # your frontend domain
+    "http://localhost:3000",  # optional for local testing
 ]
 
 app.add_middleware(
